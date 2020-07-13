@@ -16,16 +16,16 @@ use PHPJasper\PHPJasper;
 */
 
 Route::get('/', function () {
-    $o = [];
-    exec('java -version', $o);
-    // // $jasper = new PHPJasper();
-    // // $input = storage_path('pdf/test.pdf');
-    $jasper = app(PHPJasper::class);
+    // $o = [];
+    // exec('java -version', $o);
+    // // // $jasper = new PHPJasper();
+    // // // $input = storage_path('pdf/test.pdf');
+    // $jasper = app(PHPJasper::class);
 
-    $input = base_path('vendor').'/geekcom/phpjasper-laravel/examples/hello_world_params.jrxml';
-    $jasper = new PHPJasper;
-    $jasper->compile($input)->execute();
-
+    // $input = base_path('vendor').'/geekcom/phpjasper-laravel/examples/hello_world_params.jrxml';
+    // $jasper = new PHPJasper;
+    // $jasper->compile($input)->execute();
+    return view('welcome');
 });
 
 Auth::routes();
