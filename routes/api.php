@@ -22,5 +22,3 @@ Route::middleware('api')->group(function () {
     Route::post('/users/login', 'User\\LoginAction');
     Route::post('/users', 'User\\RetrieveAction')->middleware('auth:api');
 });
-
-// Route::post('/users/login', 'User\\LoginAction');

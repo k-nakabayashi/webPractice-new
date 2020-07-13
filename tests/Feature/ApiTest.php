@@ -25,5 +25,12 @@ class ApiTest extends TestCase
                 'password' => '25871236',
             ]
         )->assertStatus(200);
+
+        $result = $this->json(
+            'POST',
+            '/api/users'
+        );
+
+        var_dump($result);
     }
 }

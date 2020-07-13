@@ -19,8 +19,9 @@ class LoginAction extends Controller
         $this->authManager = $authManager;
     }
 
-    public function __invoke(Request $request, TokenResponder $responder)
+    public function __invoke(Request $request, TokenResponder $responder): JsonResponse
     {
+        /** @var JWTGuard $guard */
         $guard = $this->authManager->guard('api');
 
         $token = $guard->attempt([
